@@ -7,53 +7,31 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using MySql.Data;
 using MySql.Data.MySqlClient;
+
 
 namespace auth
 {
-    public partial class Auth : Form
+    public partial class Queries : Form
     {
-        public Auth()
+        public Queries()
         {
             InitializeComponent();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void loginBut_Click(object sender, EventArgs e)
-        {
-
-            string logStr = loginBox.Text;
-            string passStr = passwordBox.Text;
+            string item = textBox1.Text;
             string connStr = "server=localhost;user=root;database=users;password=;";
-            string sql = "SELECT log, pass FROM users";
-            if (userCheck(connStr, sql, logStr, passStr))
-            {
-                MessageBox.Show("Успешно", "Успех");
-                this.Visible = false;
-                Queries qr = new Queries();
-                qr.Show();
-                
-            } else
-            {
-                MessageBox.Show("НеУспешно", "НеУспех");
-            }
-            
-
-
-
-
+            string sql = $"SELECT `name`, `left` FROM `products` WHERE `name` = '{item}'";
+            listBox1.Items.Add(Sel(connStr, sql));
         }
 
 
-
-        bool userCheck (string connStr, string sqlCommand, string user, string pass)
+        string Sel(string connStr, string sqlCommand)
         {
-            
+            string returnString = "";
+
             try
             {
                 MySqlConnection conn = new MySqlConnection(connStr);
@@ -63,24 +41,23 @@ namespace auth
                 while (reader.Read())
                 {
                     // элементы массива [] - это значения столбцов из запроса SELECT
-                    if ((user == reader[0].ToString()) & pass == reader[1].ToString())
-                    {
-                        reader.Close();  
-                        conn.Close();
-                        return true;
-                    }
+                    returnString = reader[1].ToString();
                 }
                 reader.Close(); // закрываем reader
                 conn.Close();
-                return false;
 
             }
             catch (Exception e)
             {
                 MessageBox.Show(e.Message, "Исключение!");
             }
-            return false;
+            return returnString;
 
+        }
+
+        private void Queries_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
