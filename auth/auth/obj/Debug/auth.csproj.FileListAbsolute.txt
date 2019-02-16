@@ -11,3 +11,4 @@ C:\Users\24-11\source\repos\auth\auth\obj\Debug\auth.csproj.CopyComplete
 C:\Users\24-11\source\repos\auth\auth\obj\Debug\auth.exe
 C:\Users\24-11\source\repos\auth\auth\obj\Debug\auth.pdb
 C:\Users\24-11\source\repos\auth\auth\obj\Debug\auth.Queries.resources
+C:\Users\24-11\source\repos\auth\auth\obj\Debug\auth.Inserting.resources

@@ -59,5 +59,17 @@ namespace auth
         {
             Application.Exit();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Inserting ins = new Inserting();
+            ins.Show();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Deleting del = new Deleting();
+            del.Show();
+        }
     }
 }
