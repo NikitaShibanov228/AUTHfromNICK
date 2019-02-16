@@ -1,0 +1,12 @@
+C:\Users\24-11\source\repos\auth\auth\bin\Debug\auth.exe.config
+C:\Users\24-11\source\repos\auth\auth\bin\Debug\auth.exe
+C:\Users\24-11\source\repos\auth\auth\bin\Debug\auth.pdb
+C:\Users\24-11\source\repos\auth\auth\bin\Debug\MySql.Data.dll
+C:\Users\24-11\source\repos\auth\auth\obj\Debug\auth.csprojAssemblyReference.cache
+C:\Users\24-11\source\repos\auth\auth\obj\Debug\auth.Auth.resources
+C:\Users\24-11\source\repos\auth\auth\obj\Debug\auth.Properties.Resources.resources
+C:\Users\24-11\source\repos\auth\auth\obj\Debug\auth.csproj.GenerateResource.cache
+C:\Users\24-11\source\repos\auth\auth\obj\Debug\auth.csproj.CoreCompileInputs.cache
+C:\Users\24-11\source\repos\auth\auth\obj\Debug\auth.csproj.CopyComplete
+C:\Users\24-11\source\repos\auth\auth\obj\Debug\auth.exe
+C:\Users\24-11\source\repos\auth\auth\obj\Debug\auth.pdb
